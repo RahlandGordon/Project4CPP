@@ -22,15 +22,15 @@ int StringParserClass::getLastError(){
 }
 bool StringParserClass::setTags(const char *pStartTag, const char *pEndTag){
 	
-				//length of start and endtag
+				//length of both tags
 				int sl= strlen(pStartTag)++;
 				int el = strlen(pEndTag)++;
 
-				//initialize mem space of pStartTag, pEndTag
+				//initialize memory space
 				StringParserClass::pStartMem = (char*)malloc(sl);
 				StringParserClass::pEndMem = (char*)malloc(el);
 
-				//set tag to pStartTag
+				//set memory space to pStartMem
 				strncpy(StringParserClass::pStartMem,pStartMem,sl);
 				strncpy(StringParserClass::pEndMem,pEndMem,el);
 				if(*StringParserClass::pStartMem != NULL && *StringParserClass::pEndMem != NULL){
